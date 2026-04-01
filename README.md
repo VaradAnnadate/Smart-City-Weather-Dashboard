@@ -12,7 +12,7 @@ A web application that provides comprehensive weather information with intellige
 - **Automatic Location Detection**: Uses the browser's Geolocation API to automatically load local weather when available
 
 ## API Used
-- **OpenWeatherMap API**: https://openweathermap.org/api
+- **Free Weather API**: https://www.weatherapi.com/
 
 
 ## Technologies
