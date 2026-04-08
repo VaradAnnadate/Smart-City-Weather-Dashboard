@@ -1,25 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Weather Dashboard</h1>
-      <div class="searchBox">
-        <input type="text" id="cityInput" placeholder="Enter city..." />
-        <button id="searchBtn">Search</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="theme-toggle">
+    <button id="themeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+
+    <div class="searchBox">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button id="searchBtn">Get Weather</button>
+    </div>
+
+    <p id="loadingText" style="display: none">Fetching data...</p>
+
+    <div id="weatherDiv" class="weatherDiv">
+      <h2 id="cityName">Search for a city</h2>
+      <h3 id="temp">--°C</h3>
+      <p id="desc">Weather details will appear here</p>
+
+      <button id="saveBtn" style="display: none; margin-top: 15px; background-color: #4caf50;">❤️ Save City</button>
+    </div>
+
+    <div class="saved-section">
+      <h2>Saved Cities</h2>
+      <div class="controls">
+        <input type="text" id="filterInput" placeholder="Search saved..." />
+
+        <select id="filterTempSelect">
+          <option value="all">All Temps</option>
+          <option value="hot">Hot (> 25°C)</option>
+          <option value="cold">Cold (< 10°C)</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="none">Sort By</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="temp-asc">Temp (Low-High)</option>
+          <option value="temp-desc">Temp (High-Low)</option>
+        </select>
       </div>
-      <p id="loadingText" style="display: none">Fetching data...</p>
-      <div id="weatherDiv" class="weatherDiv">
-        <h2 id="cityName">Search for a city</h2>
-        <h3 id="temp">--°C</h3>
-        <p id="desc">Weather details will appear here</p>
+
+      <div id="savedCitiesList" class="saved-cities-list">
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

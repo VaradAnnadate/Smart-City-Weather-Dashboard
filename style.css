@@ -1,42 +1,118 @@
+.theme-toggle {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #ffe0b2;
+  background-color: #fce4ec;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+  /* background: red; */
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.weatherDiv {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .container {
-  max-width: 400px;
-  width: 90%;
+  max-width: 600px;
+  width: 100%;
   text-align: center;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .weatherDiv {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.saved-section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.saved-cities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  /* border: 1px solid black; */
+}
+
+.city-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+  color: #333;
+}
+
+.dark-mode .city-card {
+  background: #2d2d2d;
+  color: #e0e0e0;
 }
 
 .searchBox {
   margin-bottom: 20px;
 }
 
-input {
-  padding: 12px;
-  width: 60%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5252;
+  padding: 5px 8px;
+  font-size: 10px;
+  /* color: black; */
 }
 
-button {
-  padding: 12px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.weatherDiv {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.city-card h4 {
+  margin: 0 0 5px 0;
 }
