@@ -1,4 +1,4 @@
-const API_KEY = "bf7eb9d0b9064f4c92874102261603";
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 let savedCities = [];
 let currentWeatherData = null;

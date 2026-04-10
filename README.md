@@ -1,28 +1,34 @@
 # Smart City Weather Dashboard
 
 ## Description
-A web application that provides comprehensive weather information with intelligent advice based on current and forecasted weather conditions. Beyond basic temperature readings, it offers practical suggestions such as "Bring an umbrella!" when rain probability exceeds 20%, helping users prepare for their day effectively.
+A modern, premium weather dashboard built with performance and user experience in mind. It allows users to search for real-time weather data across the globe, save their favorite cities, and manage them with advanced filtering and sorting tools. The application features a sleek glassmorphic design and a responsive dark mode for a seamless experience on any device.
 
-## Features
-- **City Search**: Search for weather information by city name
-- **5-Day Forecast**: View detailed weather predictions for the next 5 days
-- **Dynamic Weather Icons**: Visual icons that change based on weather codes for better understanding
-- **Smart Weather Advice**: Contextual recommendations based on weather conditions (e.g., umbrella for rain, sunscreen for sunny days)
-- **Adaptive UI**: Background colors that dynamically change based on temperature (blue tones for cold weather, orange tones for hot weather)
-- **Automatic Location Detection**: Uses the browser's Geolocation API to automatically load local weather when available
+## Core Features
+- **Real-time City Search**: Fetch instant weather updates for any city worldwide using the WeatherAPI.
+- **Glassmorphic UI**: Beautiful, modern interface featuring radial gradients, backdrop blurs, and smooth micro-interactions.
+- **Dark Mode Support**: A fully integrated dark theme that adapts the entire UI for low-light environments.
+- **Save Favorite Cities**: Bookmark specific cities to keep them in a persistent collection for quick access.
+- **Advanced List Management**:
+  - **Search Filtering**: Quickly find saved cities by name.
+  - **Climate Categories**: Toggle between "Hot" (>25°C) and "Cold" (<10°C) filters.
+  - **Multi-Level Sorting**: Organize your favorites alphabetically or by temperature (High/Low).
+- **Responsive Design**: Mobile-first architecture that scales beautifully from smartphones to desktops.
+- **Error Handling & Feedback**: Includes animated loading states and user-friendly error messages for "City not found" cases.
 
-## API Used
-- **Free Weather API**: https://www.weatherapi.com/
+## Technologies Used
+- **Frontend**: HTML5, Vanilla JavaScript (ES6+)
+- **Styling**: Modern CSS3 (CSS Variables, Flexbox, Grid, Glassmorphism, Animations)
+- **API**: [WeatherAPI](https://www.weatherapi.com/) for real-time weather data.
+- **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) for professional typography.
 
+## How to Run
+1. Clone the repository.
+2. Open `index.html` in any modern web browser.
+3. (Optional) Run via a local server (like Live Server in VS Code) for the best experience.
 
-## Technologies
-- **HTML5**: Structure and semantic markup
-- **CSS3**: Styling with responsive design and dynamic color changes
-- **Vanilla JavaScript**: DOM manipulation, API calls, and geolocation handling
-- **Fetch API**: For making HTTP requests to the weather API
-
-### Usage
-- **Automatic Location**: Allow location access when prompted to see local weather
-- **City Search**: Enter a city name in the search box and click "Search" or press Enter
-- **Weather Advice**: Read the advice section for personalized recommendations
-- **Forecast**: Scroll through the 5-day forecast cards
+## Usage Guide
+- **Search**: Type a city name in the input box and press "Enter" or click "Get Weather".
+- **Save**: Once weather data is loaded, click the "❤️ Save City" button to add it to your favorites.
+- **Manage**: Use the controls in the "Saved Cities" section to search, filter by temperature, or sort your collection.
+- **Remove**: Click the "X" on any city card to remove it from your saved list.
+- **Theme**: Click the toggle in the top-right corner to switch between Light and Dark modes.
